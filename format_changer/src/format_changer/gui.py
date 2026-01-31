@@ -74,12 +74,7 @@ class GUI:
                     output_docx = os.path.splitext(self.file_path)[0] + ".docx"
                     cv = Converter(self.file_path)
                     self.converted_file = cv.convert(output_docx)
-                    messagebox.showinfo("Success", f"WORD created successfully!")
-                    
-                
-            
-
-            
+                    messagebox.showinfo("Success", f"WORD created successfully!")           
         except Exception as e:
             self.status.config(text=f"Error: {str(e)}", fg="red")
             messagebox.showerror("Error", str(e))
