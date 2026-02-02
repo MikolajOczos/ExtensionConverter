@@ -5,7 +5,7 @@ from pdf2docx import *
 import os
 import shutil
 import time
-
+import PyInstaller.__main__
 
 class GUI:
     def __init__(self, root):
@@ -91,3 +91,10 @@ class GUI:
 root = tk.Tk()
 app = GUI(root)
 root.mainloop()
+
+
+##PyInstaller.__main__.run([
+    ##'gui.py',
+    ##'--onefile',
+    ##'--windowed'
+##])
